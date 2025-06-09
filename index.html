@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+    
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="gradient-text">Portfolio Website</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <span class="nav-icon">🏠</span>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">
+                        <span class="nav-icon">👤</span>
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <span class="nav-icon">💼</span>
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <span class="nav-icon">📧</span>
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link resume-btn" id="resume-btn">
+                        <span class="nav-icon">📄</span>
+                        Resume
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name gradient-text">Vinay Guleria</span>
+                        <span class="title">Full Stack Developer</span>
+                    </h1>
+                    <p class="hero-description">
+                        Crafting innovative digital experiences with cutting-edge technologies. 
+                        Passionate about creating beautiful, functional, and user-centric applications 
+                        that make a difference.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <img src="https://res.cloudinary.com/doj1ogn2r/image/upload/v1749214466/profilepic2_grzlwj.jpg" alt="Profile Picture" class="profile-img">
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a passionate web developer. My journey
+                        in technology began with curiosity and has evolved into a dedication to crafting 
+                        exceptional user experiences.
+                    </p>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Frontend</h3>
+                            <div class="skills">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Vue.js</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Backend</h3>
+                            <div class="skills">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">Express</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Tools</h3>
+                            <div class="skills">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">Cursor AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline">
+                    <h3>Experience & Education</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Web Developer Intern</h4>
+                            <span class="timeline-date">2025 - Present</span>
+                            <p>Unified Mentor</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Freelancer</h4>
+                            <span class="timeline-date">2024 - 2025</span>
+                            <p>Organic By Pooja - Backend Developer</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>BCA</h4>
+                            <span class="timeline-date">2022 - 2025</span>
+                            <p>Chandigarh University - Bachelor's in Computer Application</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-project="1">
+                    <div class="project-image">
+                        <img src="https://res.cloudinary.com/doj1ogn2r/image/upload/v1748104836/E-mart_dchlcf.png" alt="E-commerce Platform">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Mart</h3>
+                        <p>E-Mart is a full-stack e-commerce platform built with React, TypeScript, and Firebase. It provides a seamless shopping experience for customers while offering robust management tools for vendors and administrators.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="2">
+                    <div class="project-image">
+                        <img src="https://res.cloudinary.com/doj1ogn2r/image/upload/v1749228800/Screenshot_68_qwx5i1.png" alt="Interactive Resume Website">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Interactive Resume Website</h3>
+                        <p>An interactive resume website built with HTML, CSS, and JavaScript. It provides a seamless and engaging experience for visitors to explore my skills, projects, and experiences.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Three.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="3">
+                    <div class="project-image">
+                        <img src="https://res.cloudinary.com/doj1ogn2r/image/upload/v1748104836/organicByPooja_euomdy.png" alt="E-Commerce Website">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Organic By Pooja</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Firebase Authentication</span>
+                            <span class="tech-tag">Firestore Database</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="4">
+                    <div class="project-image">
+                        <img src="https://res.cloudinary.com/doj1ogn2r/image/upload/v1749229135/Screenshot_70_dvxz1a.png" alt="Joke App">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Joke App</h3>
+                        <p>A joke app demonstrating the use of public API using Axios(Promise based HTTP client between node.js and browser).</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">EJS(Embedded JavaScript)</span>
+                            <span class="tech-tag">Axios</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, creative projects, or just having a good conversation about technology.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>vinayguleria617@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 8219440142</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Hamirpur, Himachal Pradesh, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form action="https://api.web3forms.com/submit" class="contact-form" id="contact-form" method="POST">
+                    <input type="hidden" name="access_key" value="db91e7b4-ebbe-468e-921a-8808e9af8868">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <span class="error-message" id="subject-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vinay Guleria. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/Vinay400" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/vinay-guleria-2b45bb243/" class="social-link">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+
+            </div>  
+        </div>
+    </div>
+</body>
+</html>
